@@ -1,0 +1,20 @@
+<h1>
+  {{title}}
+</h1>
+<!--Sample *ngFor-->
+<hr>
+<h1>Sample</h1>
+
+<div *ngFor="let tipo of tipos; let i=index">  
+  {{i + 1}} - {{tipo.text}}
+</div>  
+
+<b>first and last variable demo </b>
+ <div *ngFor="let tipo of tipos; let i = index; let f=first; let l=last;">
+  Row {{i}} : Name: {{tipo.text}}, is first row: {{f}}, is last row: {{l}}
+ </div>
+
+ <b>even and odd variable demo </b>
+ <div *ngFor="let tipo of tipos; let i = index; let e=even; let o=odd;">
+  Row {{i}} : Name: {{tipo.text}}, is even row: {{e}}, is odd row: {{o}}
+ </div>
