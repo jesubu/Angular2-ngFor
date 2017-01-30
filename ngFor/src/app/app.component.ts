@@ -13,5 +13,10 @@ export class AppComponent {
     { id: 2, text: "Gasto" },
     { id: 3, text: "Expediente" }
   ];
-
+  
+    hideElement: boolean = false;
+    hide(i){
+    
+      this.tipos.splice(i,1);
+    }
 }

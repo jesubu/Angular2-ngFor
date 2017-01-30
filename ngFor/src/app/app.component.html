@@ -3,18 +3,34 @@
 </h1>
 <!--Sample *ngFor-->
 <hr>
-<h1>Sample</h1>
-
+<h1>Sample 1</h1>
+<hr>
 <div *ngFor="let tipo of tipos; let i=index">  
   {{i + 1}} - {{tipo.text}}
 </div>  
-
+<h1>Sample 2</h1>
+<hr>
 <b>first and last variable demo </b>
  <div *ngFor="let tipo of tipos; let i = index; let f=first; let l=last;">
   Row {{i}} : Name: {{tipo.text}}, is first row: {{f}}, is last row: {{l}}
  </div>
-
+<h1>Sample 3</h1>
+<hr>
  <b>even and odd variable demo </b>
  <div *ngFor="let tipo of tipos; let i = index; let e=even; let o=odd;">
   Row {{i}} : Name: {{tipo.text}}, is even row: {{e}}, is odd row: {{o}}
  </div>
+<hr>
+<h1>Sample 4</h1>
+<hr>
+ <div [hidden]="hideElement" 
+     *ngFor="let tipo of tipos; let i=index">{{i}}-{{tipo.text}}
+      <a href="#" (click)="hide(i)"> x </a><bR>
+    
+</div>
+
+<h1>Sample 5</h1>
+<hr>
+<div [hidden]="tipo.hideElement" 
+*ngFor="let tipo of tipos;let i=index">{{tipo.text}}
+<a href="#" (click)="tipo.hideElement=!tipo.hideElement"> x </a><bR>
